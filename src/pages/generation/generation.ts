@@ -17,6 +17,13 @@ export class GenerationPage {
  
   createCode() {
     this.createdCode = this.qrData;
+    console.log(this.createdCode);
   }
+
+  getImage(){
+    const canvas = document.querySelector("canvas") as HTMLCanvasElement;
+    const imageData = canvas.toDataURL("image/jpeg").toString();
+    console.log(imageData);
+    }
  
 }
