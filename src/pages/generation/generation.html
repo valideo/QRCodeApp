@@ -13,13 +13,13 @@
     <ion-input type="text" placeholder="MY QR Code data" [(ngModel)]="qrData">
     </ion-input>
   </ion-item>
-  <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
+  <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Créer un QR code</button>
  
   <ion-card *ngIf="createdCode">
     <ngx-qrcode qrc-element-type="canvas" [qrc-value]="createdCode"></ngx-qrcode>
     <ion-card-content>
-      <p>Value: {{ createdCode }}</p>
-      <button ion-button (click)="getImage()">Voir l'image</button>
+      <p>Valeur du QR code: {{ createdCode }}</p>
+      <button ion-button (click)="saveImage()">Enregistrer l'image</button>
     </ion-card-content>
   </ion-card>
 </ion-content>
