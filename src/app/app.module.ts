@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery'
+import { NativeStorage } from '@ionic-native/native-storage';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { Base64ToGallery } from '@ionic-native/base64-to-gallery'
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     QrCodeProvider, 
     BarcodeScanner, 
-    Base64ToGallery
+    Base64ToGallery,
+    NativeStorage,
   ]
 })
 export class AppModule {}
